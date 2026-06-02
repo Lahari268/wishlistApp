@@ -11,7 +11,9 @@ app.use(express.static('Public'));
 
 // MongoDB Connection
 
-mongoose.connect('mongodb://127.0.0.1:27017/wishlistDB')
+mongoose.connect(
+'mongodb+srv://dbUser:MongoDB%40123@cluster0.7nudie9.mongodb.net/wishlistDB?retryWrites=true&w=majority&appName=Cluster0'
+)
 .then(() => console.log("Database Connected"))
 .catch(err => console.log(err));
 
