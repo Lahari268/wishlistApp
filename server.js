@@ -1,11 +1,7 @@
-const express = require('express');
+cconst express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-    console.log(`Server Running on Port ${PORT}`);
-});
 const app = express();
 
 app.use(express.json());
@@ -96,8 +92,8 @@ app.get('/track-price', async(req,res)=>{
 
 // Server
 
-app.listen(3000, ()=>{
+const PORT = process.env.PORT || 3000;
 
-    console.log("Server Running on Port 3000");
-
+app.listen(PORT, () => {
+    console.log(`Server Running on Port ${PORT}`);
 });
