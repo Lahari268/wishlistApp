@@ -58,3 +58,19 @@ loadWishlist();
 
 }
 loadWishlist();
+async function addToWishlist(name, price) {
+    await fetch('/add-product', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            productName: name,
+            currentPrice: price,
+            targetPrice: price // you can change logic later
+        })
+    });
+
+    alert("Added to wishlist");
+    loadWishlist();
+}
