@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use(express.static('public'));
+app.use(express.static('Public'));
 
 
 // MongoDB Connection
@@ -31,7 +31,7 @@ const Product = mongoose.model('Product', productSchema);
 // Home Route
 
 app.get('/', (req,res)=>{
-    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(__dirname + '/Public/index.html');
 });
 
 
